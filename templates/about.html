@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block csscontent %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+{% endblock %}
+    
+{% block title %}
+    About us 
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center" style="color: #083d90">About Us</h1>
+    <div class="row" style="text-align: justify;">
+        <div class="col-sm-6">
+            <p>Tourizto Online Pvt Ltd based in India, is one of India's leading online travel companies and operates the website Tourpilot.com. The company provides information, pricing, availability, and booking facility for domestic and international air travel, domestic and international hotel bookings, holiday packages, buses, trains, in city activities, inter-city and point-to-point cabs, homestays and cruises. As a leading platform of accommodation options, Tourpilot provides real-time bookings for more than 83,000 hotels in India and over 800,000 hotels around the world.
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p>We're truly humbled to have received volumes of positive customer feedback for our services. This appreciation from our prestigious clients is more valuable than any award for us. As a customer-driven travel company, our priority has always been their satisfaction. Therefore, our dedicated team of experts endeavours to achieve the goal of making our customers happy.We are proud to be accredited by major tour and travel associations in India and world like IATA, IATO, TAAI, IMF, MOT (Ministry of Tourism, Govt of India), and TOFT..</p>
+                <br>      
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="profile">
+                <img src="{% static '/img/manju.jpg' %}" class="img-fluid rounded-circle" style="height: 150px; width: 150px;">
+                <div class="card">
+                    <br>
+                    <br>
+                    <h4>Manjunath.c</h4>
+                    <p>Mca</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="profile">
+                <img src="{% static '/img/subhash.jpg' %}" class="img-fluid rounded-circle" style="height: 150px; width: 150px;">
+                <div class="card">
+                    <br>
+                    <br>
+                    <h4>Subhash.G</h4>
+                    <p>Mca</p>
+                </div>
+            </div>
+        </div>
+    
+        </div>      
+    </div>
+    <br><br><br>
+</div>
+{% endblock %}

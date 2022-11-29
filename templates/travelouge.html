@@ -1,0 +1,107 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block csscontent %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/travelouge.css' %}">
+{% endblock %}
+    
+{% block title %}
+    Travelouge
+{% endblock %}
+
+{% block jumbotron %}
+<div class="text-capitalize text-center">
+    <h1 class="text1" style="font-family:georgia">
+        TRAVEL VLOG
+    </h1>
+    <br>
+    <q style="font-style: italic;">"Travelling – Take only memories, leave only footprints..."</q>
+    <p>-Chief Seattle</p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row blog1">
+    <div class="col-6 blogimg1">
+        <img src="{% static 'img/nature.jpg' %}">
+    </div>
+    <div class="col-6 bgGreen blogInfo" style="padding: 50px;">
+        <h2 >ENJOY THE NATURE IN NEW WAY</h2>
+        <br>
+        By discovering nature, you discover yourself. Immersing yourself in nature is an ancient remedy to reduce stress, and restore strength.Experience the thrill of discovering something new, or at the very least prices.
+        <br>
+        <br>
+        <button class="explore" style="border:1px solid #3b4853">
+            <a href="{% url 'view_blog' id=2 %}">EXPLORE</a>
+        </button>
+    </div>
+
+    <div class="col-6 blogInfo" style="padding: 50px;">
+        <h2 >EXPLORE RELIGIONAL TOUR</h2>
+        <br>
+        Fascinate most religious heritage, along with a rich cultural and natural history.Make the wishlist for the expansion of religious travel is undoubtedly positive for tourism and a force for good, it also presents us with several crucial challenges.
+        <br>
+        <br>
+        <button class="explore" style="border:1px solid #3b4853">
+            <a href="{% url 'view_blog'  id=1 %}">EXPLORE</a>
+        </button>
+    </div>
+    <div class="col-6 blogimg1">
+        <img src="{% static 'img/religion.jpg' %}">
+    </div>
+
+    <div class="col-6 blogimg1">
+        <img src="{% static 'img/photo.jpg' %}">
+    </div>
+
+    <div class="col-6 bgGreen blogInfo" style="padding: 50px;">
+        <h2>LAND ON BACKWATERS OF KERELA</h2>
+        <br>One of the most exotic things to do in India, the Backwaters of Kerala have never failed to mesmerize its visitors with its beauty.A beautiful big deck lets you sit out and enjoy the passing view whilst your chef prepares a delicious southern Indian curry for you to enjoy.
+        <br>
+        <br>
+        <button class="explore" style="border:1px solid #3b4853">
+            <a href="{% url 'view_blog'  id=3 %}">EXPLORE</a>
+        </button>
+    </div> 
+</div>
+
+<br>
+<br>
+<div class="moreBlogs text-center">
+    <div class="container ">
+        <h2>MORE BLOGS</h2>
+        <br>
+        <div class="grid-container">
+        {% for blog in blogs %}
+        <div class="grid-item">
+            <div class="card" style="width:22rem; height:16rem;">
+                <img src="{{blog.thumbnail.url}}" style="width: 350px; height: 175px; text-align:center;" class="card-img-top images" alt="...">
+                <div class="card-body" style="text-align: center;">
+                    <a href="{% url 'view_blog' blog.id %}"><h5 class="card-title">{{blog.title}}</h5></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="trekking">
+    <div class="container">
+        <div class="row">
+            <div class="col-5 bgw" style="padding: 20px; text-align:justify;">
+                <h2 class="text-center">TREKKING</h2>
+                <p>It’s never too late to start something new. Trekking is one of those few activities that can be started at any point in time. All you need is courage and determination to venture out on a new adventure</p>
+                <p>Treks in India are a great way to enjoy the natural splendour of the country and experience the real thrill of mountains. There are four main areas for trekking in this country, out of which three are located around the Himalayas. These are Himachal Pradesh, Uttarakhand, and Jammu and Kashmir. Some of the most magnificent treks here are the Chadar trek, Roopkund Trek, Stok Kangri Summit, etc. </p>  
+                <br>     
+                <div style="text-align: center;">
+                    <button class="explore center"><a href="{% url 'view_blog' id=2 %}">EXPLORE</a></button>
+                </div>           
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
